@@ -316,41 +316,41 @@
         </header>
 
         <form id="supervisorForm">
-            <div class="form-section">
+            <div class="form-section" data-section-name="Dados Iniciais">
                 <h2>Dados Iniciais</h2>
-                <div class="form-group" id="companyNameGroup">
+                <div class="form-group" id="companyNameGroup" data-question-name="Nome da Empresa">
                     <label for="companyName">Nome da Empresa:</label>
                     <input type="text" id="companyName" name="companyName" required>
                 </div>
-                <div class="form-group" id="supervisorNameGroup">
+                <div class="form-group" id="supervisorNameGroup" data-question-name="Nome do Supervisor">
                     <label for="supervisorName">Nome do Supervisor:</label>
                     <input type="text" id="supervisorName" name="supervisorName" required>
                 </div>
-                <div class="form-group" id="supervisorPhoneGroup">
+                <div class="form-group" id="supervisorPhoneGroup" data-question-name="Número de Whatsapp com DDD do Supervisor">
                     <label for="supervisorPhone">Número de Whatsapp com DDD do Supervisor:</label>
                     <input type="tel" id="supervisorPhone" name="supervisorPhone" placeholder="(99) 99999-9999" required>
                 </div>
-                <div class="form-group" id="timeSupervisorGroup">
+                <div class="form-group" id="timeSupervisorGroup" data-question-name="Tempo na função de Supervisor nesta oficina">
                     <label for="timeSupervisor">Tempo na função de Supervisor nesta oficina:</label>
                     <input type="text" id="timeSupervisor" name="timeSupervisor" placeholder="Ex: 2 anos 6 meses" required>
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 0: Contexto e Infraestrutura da Oficina">
                 <h2>Seção 0: Contexto e Infraestrutura da Oficina</h2>
-                <div class="form-group" id="q0_1">
+                <div class="form-group" id="q0_1" data-question-name="Sua oficina possui um sistema de gestão (software) para Ordem de Serviço (O.S.), controle de veículos, agendamentos, etc.?">
                     <p class="question-text"><strong>0.1.</strong> Sua oficina possui um sistema de gestão (software) para Ordem de Serviço (O.S.), controle de veículos, agendamentos, etc.?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q0_1" value="Sim" required> Sim</label>
                         <label><input type="radio" name="q0_1" value="Nao"> Não</label>
                     </div>
                     <div id="q0_1_extra" style="display:none; margin-top: 10px;">
-                        <label for="q0_1_text" class="sub-question-text">Se sim, qual sistema é utilizado e você tem acesso e treinamento adequado para utilizá-lo plenamente?</label>
+                        <label for="q0_1_text" class="sub-question-text" data-question-name="Se sim, qual sistema é utilizado e você tem acesso e treinamento adequado para utilizá-lo plenamente?">Se sim, qual sistema é utilizado e você tem acesso e treinamento adequado para utilizá-lo plenamente?</label>
                         <textarea id="q0_1_text" name="q0_1_text" rows="3"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group" id="q0_2">
+                <div class="form-group" id="q0_2" data-question-name="A oficina utiliza quadros de controle dos serviços (físicos ou digitais) para visualização do fluxo de produção?">
                     <p class="question-text"><strong>0.2.</strong> A oficina utiliza quadros de controle dos serviços (físicos ou digitais) para visualização do fluxo de produção?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q0_2" value="Sim, quadros físicos"> Sim, quadros físicos (ex: lousa, painel com cards)</label>
@@ -358,12 +358,12 @@
                         <label><input type="radio" name="q0_2" value="Nao utilizamos quadros de controle"> Não utilizamos quadros de controle</label>
                     </div>
                     <div id="q0_2_extra" style="display:none; margin-top: 10px;">
-                        <label for="q0_2_text" class="sub-question-text">Se sim, descreva brevemente como eles funcionam e são mantidos.</label>
+                        <label for="q0_2_text" class="sub-question-text" data-question-name="Se sim, descreva brevemente como eles funcionam e são mantidos.">Se sim, descreva brevemente como eles funcionam e são mantidos.</label>
                         <textarea id="q0_2_text" name="q0_2_text" rows="3"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group" id="q0_3">
+                <div class="form-group" id="q0_3" data-question-name="Existem POPs (Procedimentos Operacionais Padrão) documentados para as diferentes áreas da oficina (funilaria, pintura, desmontagem, etc.)?">
                     <p class="question-text"><strong>0.3.</strong> Existem POPs (Procedimentos Operacionais Padrão) documentados para as diferentes áreas da oficina (funilaria, pintura, desmontagem, etc.)?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q0_3" value="Sim, para a maioria das áreas"> Sim, para a maioria das áreas</label>
@@ -372,16 +372,16 @@
                     </div>
                     <div id="q0_3_extra" style="display:none; margin-top: 10px;">
                         <p class="sub-question-text">Você tem acesso fácil a todos esses POPs?</p>
-                        <div class="radio-group">
+                        <div class="radio-group" data-question-name="Acesso fácil aos POPs">
                             <label><input type="radio" name="q0_3_access" value="Sim"> Sim</label>
                             <label><input type="radio" name="q0_3_access" value="Nao"> Não</label>
                         </div>
-                        <p class="sub-question-text" style="margin-top: 10px;">Com que frequência esses POPs são revisados ou atualizados?</p>
-                        <textarea id="q0_3_frequency" name="q0_3_frequency" rows="2"></textarea>
+                        <label for="q0_3_frequency" class="sub-question-text" style="margin-top: 10px;">Com que frequência esses POPs são revisados ou atualizados?</label>
+                        <textarea id="q0_3_frequency" name="q0_3_frequency" rows="2" data-question-name="Frequência de revisão dos POPs"></textarea>
                     </div>
                 </div>
                 
-                <div class="form-group" id="q0_4">
+                <div class="form-group" id="q0_4" data-question-name="O documento 'Modelo POP Supervisor da Produção Funilaria e Pintura' (o qual estamos discutindo) foi formalmente implementado e comunicado a você?">
                     <p class="question-text"><strong>0.4.</strong> O documento "Modelo POP Supervisor da Produção Funilaria e Pintura" (o qual estamos discutindo) foi formalmente implementado e comunicado a você?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q0_4" value="Sim, foi apresentado e sou responsável por sua aplicação."> Sim, foi apresentado e sou responsável por sua aplicação.</label>
@@ -391,28 +391,28 @@
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 1: Planejamento Diário e Alinhamento">
                 <h2>Seção 1: Planejamento Diário e Alinhamento</h2>
-                <div class="form-group" id="q1_1">
+                <div class="form-group" id="q1_1" data-question-name="Existem reuniões matinais de alinhamento com o setor de atendimento na sua oficina?">
                     <p class="question-text"><strong>1.1.</strong> Existem reuniões matinais de alinhamento com o setor de atendimento na sua oficina?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q1_1" value="Sim" required> Sim</label>
                         <label><input type="radio" name="q1_1" value="Nao"> Não</label>
                     </div>
                     <div id="q1_1_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Se sim, com que frequência elas ocorrem?</p>
-                        <div class="radio-group">
+                        <p class="sub-question-text">Com que frequência elas ocorrem?</p>
+                        <div class="radio-group" data-question-name="Frequência das reuniões">
                             <label><input type="radio" name="q1_1_frequency" value="Diariamente"> Diariamente</label>
                             <label><input type="radio" name="q1_1_frequency" value="3x por semana"> 3x por semana</label>
                             <label><input type="radio" name="q1_1_frequency" value="Semanalmente"> Semanalmente</label>
                             <label><input type="radio" name="q1_1_frequency" value="Raramente"> Raramente</label>
                         </div>
-                        <p class="sub-question-text" style="margin-top: 10px;">Descreva brevemente o principal objetivo dessas reuniões e como elas se desenrolam.</p>
-                        <textarea id="q1_1_description" name="q1_1_description" rows="3"></textarea>
+                        <label for="q1_1_description" class="sub-question-text" style="margin-top: 10px;">Descreva brevemente o principal objetivo dessas reuniões e como elas se desenrolam.</label>
+                        <textarea id="q1_1_description" name="q1_1_description" rows="3" data-question-name="Descrição das reuniões"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group" id="q1_2">
+                <div class="form-group" id="q1_2" data-question-name="Se a oficina utiliza quadros de controle (vide 0.2), você é responsável por distribuir os serviços neles?">
                     <p class="question-text"><strong>1.2.</strong> Se a oficina utiliza quadros de controle (vide 0.2), você é responsável por distribuir os serviços neles?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q1_2" value="Sim, sou o principal responsável." required> Sim, sou o principal responsável.</label>
@@ -422,7 +422,7 @@
                     </div>
                     <div id="q1_2_extra" style="display:none; margin-top: 10px;">
                         <p class="sub-question-text">Se você distribui, as responsabilidades de cada profissional por veículo/etapa são claramente definidas e visualizadas nos quadros?</p>
-                        <div class="radio-group">
+                        <div class="radio-group" data-question-name="Definição de responsabilidades">
                             <label><input type="radio" name="q1_2_defined" value="Sim"> Sim</label>
                             <label><input type="radio" name="q1_2_defined" value="Nao"> Não</label>
                             <label><input type="radio" name="q1_2_defined" value="Em partes"> Em partes</label>
@@ -430,7 +430,7 @@
                     </div>
                 </div>
 
-                <div class="form-group" id="q1_3">
+                <div class="form-group" id="q1_3" data-question-name="Você utiliza alguma forma de identificação visual de prazo (ex: cores diferentes, marcadores) nos quadros de produção para indicar o dia de conclusão de cada etapa?">
                     <p class="question-text"><strong>1.3.</strong> Você utiliza alguma forma de identificação visual de prazo (ex: cores diferentes, marcadores) nos quadros de produção para indicar o dia de conclusão de cada etapa?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q1_3" value="Sim, utilizo consistentemente." required> Sim, utilizo consistentemente.</label>
@@ -440,7 +440,7 @@
                     </div>
                 </div>
 
-                <div class="form-group" id="q1_4">
+                <div class="form-group" id="q1_4" data-question-name="Com que antecedência você consegue analisar e atualizar as datas de entrega dos veículos no sistema de gestão (ou ferramenta equivalente)?">
                     <p class="question-text"><strong>1.4.</strong> Com que antecedência você consegue analisar e atualizar as datas de entrega dos veículos no sistema de gestão (ou ferramenta equivalente)?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q1_4" value="Sempre consigo com no minimo 10 dias de antecedencia." required> Sempre consigo com no mínimo 10 dias de antecedência.</label>
@@ -449,15 +449,15 @@
                         <label><input type="radio" name="q1_4" value="Nao faco essa atualizacao ou a data nao e gerenciada por mim."> Não faço essa atualização ou a data não é gerenciada por mim.</label>
                     </div>
                     <div id="q1_4_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Quais são os principais obstáculos ou facilitadores para realizar essa atualização proativa?</p>
+                        <label for="q1_4_obstacles" class="sub-question-text" data-question-name="Quais são os principais obstáculos ou facilitadores para realizar essa atualização proativa?">Quais são os principais obstáculos ou facilitadores para realizar essa atualização proativa?</label>
                         <textarea id="q1_4_obstacles" name="q1_4_obstacles" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 2: Acompanhamento e Controle da Produção">
                 <h2>Seção 2: Acompanhamento e Controle da Produção</h2>
-                <div class="form-group" id="q2_1">
+                <div class="form-group" id="q2_1" data-question-name="Você realiza rondas diárias nos setores produtivos?">
                     <p class="question-text"><strong>2.1.</strong> Você realiza rondas diárias nos setores produtivos?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q2_1" value="Sim, no minimo 2 vezes ao dia." required> Sim, no mínimo 2 vezes ao dia.</label>
@@ -466,20 +466,20 @@
                         <label><input type="radio" name="q2_1" value="Raramente ou nunca."> Raramente ou nunca.</label>
                     </div>
                     <div id="q2_1_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Qual o principal objetivo dessas rondas para você e o que você busca identificar nelas?</p>
+                        <label for="q2_1_objective" class="sub-question-text" data-question-name="Qual o principal objetivo dessas rondas para você e o que você busca identificar nelas?">Qual o principal objetivo dessas rondas para você e o que você busca identificar nelas?</label>
                         <textarea id="q2_1_objective" name="q2_1_objective" rows="3"></textarea>
                     </div>
                 </div>
                 
-                <div class="form-group" id="q2_2">
+                <div class="form-group" id="q2_2" data-question-name="Como você lida com contratempos (ex: problemas técnicos, atrasos inesperados) que afetam o planejamento de produção e o prazo de entrega?">
                     <p class="question-text"><strong>2.2.</strong> Como você lida com contratempos (ex: problemas técnicos, atrasos inesperados) que afetam o planejamento de produção e o prazo de entrega?</p>
-                    <label for="q2_2_communication" class="sub-question-text">Descreva o fluxo de comunicação e as ações tomadas.</label>
+                    <label for="q2_2_communication" class="sub-question-text" data-question-name="Descreva o fluxo de comunicação e as ações tomadas.">Descreva o fluxo de comunicação e as ações tomadas.</label>
                     <textarea id="q2_2_communication" name="q2_2_communication" rows="3" required></textarea>
-                    <label for="q2_2_time" class="sub-question-text" style="margin-top: 10px;">Qual o tempo médio para comunicar uma alteração de prazo ao setor de atendimento/cliente?</label>
+                    <label for="q2_2_time" class="sub-question-text" style="margin-top: 10px;" data-question-name="Qual o tempo médio para comunicar uma alteração de prazo ao setor de atendimento/cliente?">Qual o tempo médio para comunicar uma alteração de prazo ao setor de atendimento/cliente?</label>
                     <textarea id="q2_2_time" name="q2_2_time" rows="2" required></textarea>
                 </div>
                 
-                <div class="form-group" id="q2_3">
+                <div class="form-group" id="q2_3" data-question-name="Existe um processo para solicitar atualização do status das peças ao departamento de peças após suas rondas?">
                     <p class="question-text"><strong>2.3.</strong> Existe um processo para solicitar atualização do status das peças ao departamento de peças após suas rondas?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q2_3" value="Sim, e um processo formalizado." required> Sim, é um processo formalizado.</label>
@@ -487,12 +487,12 @@
                         <label><input type="radio" name="q2_3" value="Nao, nao ha um processo claro."> Não, não há um processo claro.</label>
                     </div>
                     <div id="q2_3_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Quais são os maiores desafios ou atrasos relacionados à gestão de peças na sua oficina?</p>
+                        <label for="q2_3_challenges" class="sub-question-text" data-question-name="Quais são os maiores desafios ou atrasos relacionados à gestão de peças na sua oficina?">Quais são os maiores desafios ou atrasos relacionados à gestão de peças na sua oficina?</label>
                         <textarea id="q2_3_challenges" name="q2_3_challenges" rows="3"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group" id="q2_4">
+                <div class="form-group" id="q2_4" data-question-name="Você tem total cuidado para não iniciar a produção de um veículo que não possa ter continuidade por falta de peças essenciais ou outros motivos?">
                     <p class="question-text"><strong>2.4.</strong> Você tem total cuidado para não iniciar a produção de um veículo que não possa ter continuidade por falta de peças essenciais ou outros motivos?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q2_4" value="Sim, essa e uma regra estrita que sigo." required> Sim, essa é uma regra estrita que sigo.</label>
@@ -500,15 +500,15 @@
                         <label><input type="radio" name="q2_4" value="Nao, muitas vezes somos forcados a iniciar sem todas as condicoes."> Não, muitas vezes somos forçados a iniciar sem todas as condições.</label>
                     </div>
                     <div id="q2_4_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Se a produção é iniciada sem continuidade garantida, quais são as consequências mais comuns?</p>
+                        <label for="q2_4_consequences" class="sub-question-text" data-question-name="Se a produção é iniciada sem continuidade garantida, quais são as consequências mais comuns?">Se a produção é iniciada sem continuidade garantida, quais são as consequências mais comuns?</label>
                         <textarea id="q2_4_consequences" name="q2_4_consequences" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 3: Qualidade e Padronização">
                 <h2>Seção 3: Qualidade e Padronização</h2>
-                <div class="form-group" id="q3_1">
+                <div class="form-group" id="q3_1" data-question-name="Qual a sua avaliação sobre o nível de execução dos POPs (que existem) pelas equipes nas áreas produtivas?">
                     <p class="question-text"><strong>3.1.</strong> Qual a sua avaliação sobre o nível de execução dos POPs (que existem) pelas equipes nas áreas produtivas?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q3_1" value="Excelente, a adesao e alta." required> Excelente, a adesão é alta.</label>
@@ -519,7 +519,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group" id="q3_2">
+                <div class="form-group" id="q3_2" data-question-name="Existe um POP específico para a desmontagem dos veículos antes do reparo?">
                     <p class="question-text"><strong>3.2.</strong> Existe um POP específico para a desmontagem dos veículos antes do reparo?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q3_2" value="Sim" required> Sim</label>
@@ -527,7 +527,7 @@
                     </div>
                     <div id="q3_2_extra" style="display:none; margin-top: 10px;">
                         <p class="sub-question-text">Se sim, você garante que ele seja realizado de forma a assegurar um orçamento complementar adequado (identificação de peças e serviços adicionais)?</p>
-                        <div class="radio-group">
+                        <div class="radio-group" data-question-name="Garantia de orçamento complementar">
                             <label><input type="radio" name="q3_2_guarantee" value="Sim, e um ponto de atencao meu."> Sim, é um ponto de atenção meu.</label>
                             <label><input type="radio" name="q3_2_guarantee" value="Em partes, pois ha pressao por agilidade."> Em partes, pois há pressão por agilidade.</label>
                             <label><input type="radio" name="q3_2_guarantee" value="Nao consigo garantir totalmente."> Não consigo garantir totalmente.</label>
@@ -535,7 +535,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group" id="q3_3">
+                <div class="form-group" id="q3_3" data-question-name="A oficina utiliza um checklist de qualidade durante e ao término das etapas produtivas?">
                     <p class="question-text"><strong>3.3.</strong> A oficina utiliza um checklist de qualidade durante e ao término das etapas produtivas?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q3_3" value="Sim, e um processo formal e obrigatorio." required> Sim, é um processo formal e obrigatório.</label>
@@ -544,7 +544,7 @@
                     </div>
                     <div id="q3_3_extra" style="display:none; margin-top: 10px;">
                         <p class="sub-question-text">Se sim, você pessoalmente valida o checklist antes da conclusão do veículo ser informada ao atendimento?</p>
-                        <div class="radio-group">
+                        <div class="radio-group" data-question-name="Validação do checklist">
                             <label><input type="radio" name="q3_3_validate" value="Sempre"> Sempre</label>
                             <label><input type="radio" name="q3_3_validate" value="Quase sempre"> Quase sempre</label>
                             <label><input type="radio" name="q3_3_validate" value="Raramente"> Raramente</label>
@@ -553,7 +553,7 @@
                     </div>
                 </div>
 
-                <div class="form-group" id="q3_4">
+                <div class="form-group" id="q3_4" data-question-name="A oficina realiza o mapeamento semanal dos índices de retrabalho por setor e por colaborador?">
                     <p class="question-text"><strong>3.4.</strong> A oficina realiza o mapeamento semanal dos índices de retrabalho por setor e por colaborador?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q3_4" value="Sim, os dados sao coletados e analisados." required> Sim, os dados são coletados e analisados.</label>
@@ -561,15 +561,15 @@
                         <label><input type="radio" name="q3_4" value="Nao, nao ha mapeamento de retrabalho."> Não, não há mapeamento de retrabalho.</label>
                     </div>
                     <div id="q3_4_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Se sim, quais foram as principais ações tomadas com base nesses dados (ex: treinamentos, ajustes de processo)?</p>
+                        <label for="q3_4_actions" class="sub-question-text" data-question-name="Se sim, quais foram as principais ações tomadas com base nesses dados (ex: treinamentos, ajustes de processo)?">Se sim, quais foram as principais ações tomadas com base nesses dados (ex: treinamentos, ajustes de processo)?</label>
                         <textarea id="q3_4_actions" name="q3_4_actions" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 4: Gestão de Equipe e Recursos">
                 <h2>Seção 4: Gestão de Equipe e Recursos</h2>
-                <div class="form-group" id="q4_1">
+                <div class="form-group" id="q4_1" data-question-name="Você tem metas claras e acompanhamento para o cumprimento dos prazos individuais dos colaboradores da produção?">
                     <p class="question-text"><strong>4.1.</strong> Você tem metas claras e acompanhamento para o cumprimento dos prazos individuais dos colaboradores da produção?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q4_1" value="Sim, e faco esse acompanhamento regularmente." required> Sim, e faço esse acompanhamento regularmente.</label>
@@ -578,7 +578,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group" id="q4_2">
+                <div class="form-group" id="q4_2" data-question-name="Com que frequência você realiza reuniões de feedback individuais com os colaboradores para tratar de performance ou desvios de planejamento?">
                     <p class="question-text"><strong>4.2.</strong> Com que frequência você realiza reuniões de feedback individuais com os colaboradores para tratar de performance ou desvios de planejamento?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q4_2" value="Regularmente, conforme necessidade." required> Regularmente, conforme necessidade.</label>
@@ -587,14 +587,14 @@
                     </div>
                     <div id="q4_2_extra" style="display:none; margin-top: 10px;">
                         <p class="sub-question-text">Existe um histórico de feedback registrado?</p>
-                        <div class="radio-group">
+                        <div class="radio-group" data-question-name="Histórico de feedback">
                             <label><input type="radio" name="q4_2_history" value="Sim"> Sim</label>
                             <label><input type="radio" name="q4_2_history" value="Nao"> Não</label>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-group" id="q4_3">
+                <div class="form-group" id="q4_3" data-question-name="Como a oficina controla os custos com insumos de produção (tintas, massas, lixas, etc.)?">
                     <p class="question-text"><strong>4.3.</strong> Como a oficina controla os custos com insumos de produção (tintas, massas, lixas, etc.)?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q4_3" value="Temos um sistema de controle rigoroso e acompanho os relatorios." required> Temos um sistema de controle rigoroso e acompanho os relatórios.</label>
@@ -602,12 +602,12 @@
                         <label><input type="radio" name="q4_3" value="O controle e informal ou inexistente na minha area."> O controle é informal ou inexistente na minha área.</label>
                     </div>
                     <div id="q4_3_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Você já propôs ou implementou alguma ação para otimizar ou reduzir esses custos? Se sim, qual?</p>
+                        <label for="q4_3_actions" class="sub-question-text" data-question-name="Você já propôs ou implementou alguma ação para otimizar ou reduzir esses custos? Se sim, qual?">Você já propôs ou implementou alguma ação para otimizar ou reduzir esses custos? Se sim, qual?</label>
                         <textarea id="q4_3_actions" name="q4_3_actions" rows="3"></textarea>
                     </div>
                 </div>
                 
-                <div class="form-group" id="q4_4">
+                <div class="form-group" id="q4_4" data-question-name="Existem planos de manutenção e checagem periódica de todos os equipamentos e ferramentas essenciais (ex: cabines de pintura, solda Mig Mag, repuxadeira, elevadores)?">
                     <p class="question-text"><strong>4.4.</strong> Existem planos de manutenção e checagem periódica de todos os equipamentos e ferramentas essenciais (ex: cabines de pintura, solda Mig Mag, repuxadeira, elevadores)?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q4_4" value="Sim, e acompanho a execucao." required> Sim, e acompanho a execução.</label>
@@ -615,12 +615,12 @@
                         <label><input type="radio" name="q4_4" value="Nao existem planos formais, a manutencao e reativa."> Não existem planos formais, a manutenção é reativa.</label>
                     </div>
                     <div id="q4_4_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Você já teve algum problema de produção significativo devido à falha de equipamentos?</p>
+                        <label for="q4_4_problems" class="sub-question-text" data-question-name="Você já teve algum problema de produção significativo devido à falha de equipamentos?">Você já teve algum problema de produção significativo devido à falha de equipamentos?</label>
                         <textarea id="q4_4_problems" name="q4_4_problems" rows="2"></textarea>
                     </div>
                 </div>
                 
-                <div class="form-group" id="q4_5">
+                <div class="form-group" id="q4_5" data-question-name="Qual a sua percepção sobre a organização e limpeza das áreas produtivas da oficina?">
                     <p class="question-text"><strong>4.5.</strong> Qual a sua percepção sobre a organização e limpeza das áreas produtivas da oficina?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q4_5" value="Excelente, consistentemente limpa e organizada." required> Excelente, consistentemente limpa e organizada.</label>
@@ -629,15 +629,15 @@
                         <label><input type="radio" name="q4_5" value="Insatisfatoria."> Insatisfatória.</label>
                     </div>
                     <div id="q4_5_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Que ações você toma (ou gostaria de tomar) para garantir a organização e limpeza?</p>
+                        <label for="q4_5_actions" class="sub-question-text" data-question-name="Que ações você toma (ou gostaria de tomar) para garantir a organização e limpeza?">Que ações você toma (ou gostaria de tomar) para garantir a organização e limpeza?</label>
                         <textarea id="q4_5_actions" name="q4_5_actions" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 5: Normas de Segurança e EPIs">
                 <h2>Seção 5: Normas de Segurança e EPIs</h2>
-                <div class="form-group" id="q5_1">
+                <div class="form-group" id="q5_1" data-question-name="Como você garante que as normas de segurança e o uso de EPIs sejam cumpridos por toda a equipe e por você mesmo?">
                     <p class="question-text"><strong>5.1.</strong> Como você garante que as normas de segurança e o uso de EPIs sejam cumpridos por toda a equipe e por você mesmo?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q5_1" value="Realizo fiscalizacoes regulares e aplico as politicas." required> Realizo fiscalizações regulares e aplico as políticas.</label>
@@ -645,12 +645,12 @@
                         <label><input type="radio" name="q5_1" value="Apenas informo, mas nao fiscalizo ativamente."> Apenas informo, mas não fiscalizo ativamente.</label>
                     </div>
                     <div id="q5_1_extra" style="display:none; margin-top: 10px;">
-                        <p class="sub-question-text">Quais são os maiores desafios para a adesão às normas de segurança na sua oficina?</p>
+                        <label for="q5_1_challenges" class="sub-question-text" data-question-name="Quais são os maiores desafios para a adesão às normas de segurança na sua oficina?">Quais são os maiores desafios para a adesão às normas de segurança na sua oficina?</label>
                         <textarea id="q5_1_challenges" name="q5_1_challenges" rows="3"></textarea>
                     </div>
                 </div>
                 
-                <div class="form-group" id="q5_2">
+                <div class="form-group" id="q5_2" data-question-name="Sua equipe recebeu treinamento específico sobre procedimentos para veículos híbridos e elétricos (desligamento, descarga de baterias) e para carga auxiliar em carros com sensores?">
                     <p class="question-text"><strong>5.2.</strong> Sua equipe recebeu treinamento específico sobre procedimentos para veículos híbridos e elétricos (desligamento, descarga de baterias) e para carga auxiliar em carros com sensores?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q5_2" value="Sim, todos os envolvidos estao treinados e cientes." required> Sim, todos os envolvidos estão treinados e cientes.</label>
@@ -661,21 +661,21 @@
                 </div>
             </div>
 
-            <div class="form-section">
+            <div class="form-section" data-section-name="Seção 6: Reflexão, Desafios e Melhoria Contínua">
                 <h2>Seção 6: Reflexão, Desafios e Melhoria Contínua</h2>
-                <div class="form-group" id="q6_1">
+                <div class="form-group" id="q6_1" data-question-name="Olhando para o POP do Supervisor de Produção, quais pontos você considera que sua oficina (e sua atuação) já executa muito bem?">
                     <p class="question-text"><strong>6.1.</strong> Olhando para o POP do Supervisor de Produção, quais pontos você considera que sua oficina (e sua atuação) já executa muito bem?</p>
                     <textarea name="q6_1" rows="4" required></textarea>
                 </div>
-                <div class="form-group" id="q6_2">
+                <div class="form-group" id="q6_2" data-question-name="Quais são os 3 maiores desafios que você enfrenta no seu dia a dia para cumprir integralmente o POP e atingir as metas de produção/qualidade?">
                     <p class="question-text"><strong>6.2.</strong> Quais são os 3 maiores desafios que você enfrenta no seu dia a dia para cumprir integralmente o POP e atingir as metas de produção/qualidade?</p>
                     <textarea name="q6_2" rows="4" required></textarea>
                 </div>
-                <div class="form-group" id="q6_3">
+                <div class="form-group" id="q6_3" data-question-name="Quais sugestões você daria para melhorar os processos de produção e a eficácia da sua supervisão?">
                     <p class="question-text"><strong>6.3.</strong> Quais sugestões você daria para melhorar os processos de produção e a eficácia da sua supervisão?</p>
                     <textarea name="q6_3" rows="4" required></textarea>
                 </div>
-                <div class="form-group" id="q6_4">
+                <div class="form-group" id="q6_4" data-question-name="Você se sente engajado(a) no processo de melhoria contínua da oficina e suas sugestões são consideradas?">
                     <p class="question-text"><strong>6.4.</strong> Você se sente engajado(a) no processo de melhoria contínua da oficina e suas sugestões são consideradas?</p>
                     <div class="radio-group">
                         <label><input type="radio" name="q6_4" value="Sim, sinto que minhas contribuicoes sao valorizadas." required> Sim, sinto que minhas contribuições são valorizadas.</label>
@@ -733,27 +733,6 @@
         const cancelBtn = document.getElementById('cancelButton');
         const statusMessage = document.getElementById('statusMessage');
 
-        // Função para buscar o texto da pergunta
-        function getQuestionText(key) {
-            const element = document.getElementById(key);
-            if (element) {
-                const textElement = element.querySelector('.question-text') || element.querySelector('label');
-                return textElement ? textElement.textContent.trim().replace(/:$/, '') : `Campo: ${key}`;
-            }
-            return `Campo: ${key}`;
-        }
-        
-        // Função para buscar o texto de sub-perguntas (campos extras)
-        function getSubQuestionText(key) {
-            const subQuestionElement = document.querySelector(`[name="${key}"]`);
-            if (subQuestionElement) {
-                 const parentGroup = subQuestionElement.closest('.form-group');
-                 const label = parentGroup.querySelector(`label[for="${key}"]`) || parentGroup.querySelector(`p.sub-question-text`);
-                 return label ? label.textContent.trim() : key;
-            }
-            return key;
-        }
-
         // Função para mostrar ou ocultar campos extras baseados na seleção do rádio
         function toggleConditionalFields(mainInputName, extraElementId, requiredFor) {
             const radioInputs = document.querySelectorAll(`input[name="${mainInputName}"]`);
@@ -790,51 +769,91 @@
         toggleConditionalFields('q4_5', 'q4_5_extra', ['Excelente, consistentemente limpa e organizada.', 'Boa, mas requer lembretes constantes.', 'Razoavel, ha pontos de melhoria significativos.', 'Insatisfatoria.']);
         toggleConditionalFields('q5_1', 'q5_1_extra', ['Realizo fiscalizacoes regulares e aplico as politicas.', 'Faco lembretes, mas a fiscalizacao e inconsistente.', 'Apenas informo, mas nao fiscalizo ativamente.']);
 
-        // Função para coletar os dados do formulário
+        // Função para coletar os dados do formulário e reestruturá-los
         function getFormData(form) {
-            const formData = new FormData(form);
             const data = {
-                identification: {},
-                questionnaire: {}
+                "Data de Envio": new Date().toISOString(),
             };
-            
-            // Adiciona a data e hora do envio
-            data['timestamp'] = firebase.firestore.FieldValue.serverTimestamp();
 
-            // Mapeia campos de identificação para a seção 'identification'
-            const identificationFields = ['companyName', 'supervisorName', 'supervisorPhone', 'timeSupervisor'];
-            
-            for (const [key, value] of formData.entries()) {
-                if (!value || value.trim() === '') {
-                    continue; // Pula campos vazios
-                }
+            const sections = document.querySelectorAll('.form-section');
 
-                if (identificationFields.includes(key)) {
-                    data.identification[key] = value;
-                } else if (key.startsWith('q')) {
-                    const questionId = key;
+            sections.forEach(section => {
+                const sectionName = section.dataset.sectionName;
+                const sectionData = {};
+                
+                const questionGroups = section.querySelectorAll('.form-group');
+                questionGroups.forEach(group => {
+                    const questionElement = group.querySelector('.question-text, label');
+                    const questionText = questionElement ? questionElement.innerText.trim() : group.dataset.questionName || 'Pergunta sem descrição';
+                    
+                    const inputs = group.querySelectorAll('input, textarea');
+                    let groupAnswers = {};
 
-                    const parentKeyMatch = key.match(/^(q\d+)_/);
-                    if (parentKeyMatch) {
-                        const parentKey = parentKeyMatch[1];
-                        if (!data.questionnaire[parentKey]) {
-                            data.questionnaire[parentKey] = {
-                                question: getQuestionText(parentKey),
-                                details: {}
-                            };
+                    inputs.forEach(input => {
+                        let answer = null;
+                        let subQuestionName = input.dataset.questionName || input.name;
+                        let subQuestionText = subQuestionName;
+
+                        const labelElement = group.querySelector(`[for="${input.id}"]`);
+                        if (labelElement) {
+                            subQuestionText = labelElement.innerText.trim();
+                        } else if (input.type === 'radio' && input.parentElement.tagName === 'LABEL') {
+                            subQuestionText = input.parentElement.innerText.trim();
+                        } else if (group.querySelector('.sub-question-text')) {
+                             subQuestionText = group.querySelector('.sub-question-text').innerText.trim();
                         }
-                        data.questionnaire[parentKey].details[questionId] = {
-                            subQuestion: getSubQuestionText(questionId),
-                            answer: value
-                        };
-                    } else {
-                        data.questionnaire[questionId] = {
-                            question: getQuestionText(questionId),
-                            answer: value
-                        };
+                        
+                        if (input.type === 'radio') {
+                            if (input.checked) {
+                                answer = input.parentElement.innerText.trim();
+                                subQuestionText = questionText;
+                            }
+                        } else {
+                            answer = input.value;
+                        }
+
+                        if (answer && answer.length > 0) {
+                            if (subQuestionName === questionText || subQuestionName === 'Pergunta sem descrição' || subQuestionName === input.name) {
+                                groupAnswers = {
+                                    "Descrição": questionText.replace(/\s+/g, ' ').replace(/^\d+\.\d+\.?\s*/, ''),
+                                    "Resposta": answer
+                                };
+                            } else {
+                                if (subQuestionText !== questionText) {
+                                    groupAnswers = {
+                                        "Descrição": questionText.replace(/\s+/g, ' ').replace(/^\d+\.\d+\.?\s*/, ''),
+                                        "Resposta": groupAnswers.Resposta || 'Não especificado', // Manter a resposta da pergunta principal
+                                        "Complemento": {
+                                            "Descrição": subQuestionText.replace(/\s+/g, ' '),
+                                            "Resposta": answer
+                                        }
+                                    };
+                                }
+                            }
+                        }
+                    });
+
+                    if (Object.keys(groupAnswers).length > 0) {
+                        if (sectionName === "Dados Iniciais") {
+                            Object.assign(data, {
+                                ["Dados de Identificação"]: data["Dados de Identificação"] || {}
+                            });
+                            data["Dados de Identificação"][questionText] = {
+                                "Resposta": groupAnswers.Resposta
+                            };
+                        } else {
+                            Object.assign(data, {
+                                ["Questionário"]: data["Questionário"] || {}
+                            });
+                            Object.assign(data["Questionário"], {
+                                [sectionName]: data["Questionário"][sectionName] || {}
+                            });
+                            data["Questionário"][sectionName][group.dataset.questionName] = groupAnswers;
+                        }
                     }
-                }
-            }
+                });
+            });
+
             return data;
         }
 
@@ -842,81 +861,45 @@
         function showConfirmationModal(data) {
             const reviewContent = document.getElementById('reviewContent');
             reviewContent.innerHTML = ''; // Limpa conteúdo anterior
-            
-            // Cria um mapa para associar as perguntas a suas seções
-            const sections = {
-                'identification': {
-                    title: 'Dados de Identificação',
-                    questions: ['companyName', 'supervisorName', 'supervisorPhone', 'timeSupervisor']
-                },
-                'q0': {
-                    title: 'Seção 0: Contexto e Infraestrutura da Oficina',
-                    questions: ['q0_1', 'q0_2', 'q0_3', 'q0_4']
-                },
-                'q1': {
-                    title: 'Seção 1: Planejamento Diário e Alinhamento',
-                    questions: ['q1_1', 'q1_2', 'q1_3', 'q1_4']
-                },
-                'q2': {
-                    title: 'Seção 2: Acompanhamento e Controle da Produção',
-                    questions: ['q2_1', 'q2_2', 'q2_3', 'q2_4']
-                },
-                'q3': {
-                    title: 'Seção 3: Qualidade e Padronização',
-                    questions: ['q3_1', 'q3_2', 'q3_3', 'q3_4']
-                },
-                'q4': {
-                    title: 'Seção 4: Gestão de Equipe e Recursos',
-                    questions: ['q4_1', 'q4_2', 'q4_3', 'q4_4', 'q4_5']
-                },
-                'q5': {
-                    title: 'Seção 5: Normas de Segurança e EPIs',
-                    questions: ['q5_1', 'q5_2']
-                },
-                'q6': {
-                    title: 'Seção 6: Reflexão, Desafios e Melhoria Contínua',
-                    questions: ['q6_1', 'q6_2', 'q6_3', 'q6_4']
-                }
-            };
 
-            // Itera sobre as seções e constrói o conteúdo de revisão
-            for (const sectionKey in sections) {
-                const section = sections[sectionKey];
-                const sectionDiv = document.createElement('div');
-                sectionDiv.className = 'modal-review-section';
-                sectionDiv.innerHTML = `<h4>${section.title}</h4>`;
-
+            // Exibição dos Dados de Identificação
+            if (data["Dados de Identificação"]) {
+                const idSection = document.createElement('div');
+                idSection.className = 'modal-review-section';
+                idSection.innerHTML = '<h4>Dados de Identificação</h4>';
                 const ul = document.createElement('ul');
-
-                section.questions.forEach(questionId => {
+                for (const key in data["Dados de Identificação"]) {
                     const li = document.createElement('li');
                     li.className = 'modal-review-item';
+                    li.innerHTML = `<strong>${key}:</strong> ${data["Dados de Identificação"][key]["Resposta"]}`;
+                    ul.appendChild(li);
+                }
+                idSection.appendChild(ul);
+                reviewContent.appendChild(idSection);
+            }
 
-                    let questionData = data.questionnaire[questionId];
-                    if (sectionKey === 'identification') {
-                        questionData = {
-                            question: getQuestionText(questionId),
-                            answer: data.identification[questionId]
-                        };
-                    }
-
-                    if (questionData) {
-                        let answerHtml = `<strong>${questionData.question}:</strong> ${questionData.answer}`;
-                        
-                        if (questionData.details) {
-                            answerHtml += '<ul>';
-                            for (const subKey in questionData.details) {
-                                const sub = questionData.details[subKey];
-                                answerHtml += `<li><strong>${sub.subQuestion}:</strong> ${sub.answer}</li>`;
-                            }
-                            answerHtml += '</ul>';
+            // Exibição do Questionário
+            if (data["Questionário"]) {
+                for (const sectionName in data["Questionário"]) {
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.className = 'modal-review-section';
+                    sectionDiv.innerHTML = `<h4>${sectionName}</h4>`;
+                    const ul = document.createElement('ul');
+                    const questions = data["Questionário"][sectionName];
+                    for (const question in questions) {
+                        const li = document.createElement('li');
+                        li.className = 'modal-review-item';
+                        const itemData = questions[question];
+                        let itemHtml = `<strong>${itemData.Descrição}:</strong> ${itemData.Resposta}`;
+                        if (itemData.Complemento) {
+                            itemHtml += `<br><ul><li><strong>${itemData.Complemento.Descrição}:</strong> ${itemData.Complemento.Resposta}</li></ul>`;
                         }
-                        li.innerHTML = answerHtml;
+                        li.innerHTML = itemHtml;
                         ul.appendChild(li);
                     }
-                });
-                sectionDiv.appendChild(ul);
-                reviewContent.appendChild(sectionDiv);
+                    sectionDiv.appendChild(ul);
+                    reviewContent.appendChild(sectionDiv);
+                }
             }
 
             modal.style.display = 'flex';
@@ -939,14 +922,12 @@
             // Validação simples
             if (!form.checkValidity()) {
                 showStatusMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
-                // Força o navegador a exibir as mensagens de validação padrão
                 form.reportValidity();
                 return;
             }
 
-            // Coleta os dados para revisão
             const dataToSend = getFormData(form);
-            localStorage.setItem('formData', JSON.stringify(dataToSend)); // Salva os dados temporariamente
+            localStorage.setItem('formData', JSON.stringify(dataToSend));
             
             showConfirmationModal(dataToSend);
         });
@@ -965,8 +946,8 @@
                 // Envia os dados para o Firestore
                 await db.collection("QuestionarioSupervisor").add(dataToSend);
                 showStatusMessage('Respostas enviadas com sucesso! Obrigado pela sua contribuição.', 'success');
-                form.reset(); // Limpa o formulário
-                localStorage.removeItem('formData'); // Limpa os dados temporários
+                form.reset();
+                localStorage.removeItem('formData');
             } catch (error) {
                 console.error("Erro ao enviar para o Firebase:", error);
                 showStatusMessage('Erro ao enviar as respostas. Verifique sua conexão ou tente novamente mais tarde.', 'error');
@@ -976,10 +957,9 @@
         // Evento para cancelar o envio
         cancelBtn.addEventListener('click', function() {
             modal.style.display = 'none';
-            localStorage.removeItem('formData'); // Remove os dados temporários
+            localStorage.removeItem('formData');
             showStatusMessage('Envio cancelado. Você pode continuar a editar o formulário.', 'info');
         });
     </script>
-
 </body>
 </html>
